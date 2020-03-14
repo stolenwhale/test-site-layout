@@ -9,7 +9,6 @@
         :discountItem="discountItem"
       />
     </div>
-
     <button class="discount__open-discount-btn brown-btn">Смотреть все</button>
   </div>
 </template>
@@ -51,13 +50,5 @@ export default {
       ]
     };
   }
-  // computed: {
-  // isMobile() {
-  //   return (
-  //     screen.width <= 768 ||
-  //     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-  //   );
-  // }
-  // }
 };
 </script>
