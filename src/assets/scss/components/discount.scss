@@ -1,0 +1,107 @@
+.discount {
+  position: relative;
+  padding: 0 20px;
+  @include for-tablet {
+    padding: 0;
+  }
+
+  .discount__title {
+    margin: 0 0 8px 0;
+    font-family: Stolzl;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    @include for-tablet {
+      margin-bottom: 30px;
+      font-size: 30px;
+    }
+    @include for-laptop {
+      margin-bottom: 64px;
+      font-size: 48px;
+    }
+  }
+
+  .discount__grid {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .discount__card {
+    width: 48%;
+    margin: 0 0 8px 0;
+    @include for-laptop {
+      width: 22%;
+    }
+
+    &:nth-child(n + 3) {
+      display: none;
+      @include for-laptop {
+        display: block;
+      }
+    }
+
+    .discount-card__image {
+      max-width: 100%;
+      margin: 0 0 16px 0;
+    }
+
+    .discount-card__date {
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 8px 0;
+      font-family: Baskerville;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    .discount-card__desc {
+      font-family: Stolzl;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      letter-spacing: 0.177778px;
+      color: #6d6d6d;
+    }
+
+    .discount-card__conditions {
+      display: none;
+      @include for-laptop {
+        display: inline-block;
+        margin: 0 0 29px 0;
+        font-family: Stolzl;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 35px;
+        display: block;
+      }
+      @include for-desktop {
+        font-size: 48px;
+      }
+    }
+
+    .discount-card_read-more-btn {
+      width: 100%;
+      margin: 16px 0 0 0;
+      padding: 15px 35px;
+    }
+  }
+
+  .discount__open-discount-btn {
+    width: 100%;
+    padding: 12px 55px;
+    margin: 8px 0 0 0;
+    @include for-tablet {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: auto;
+      padding: 12px 100px;
+    }
+    @include for-laptop {
+      display: none;
+    }
+  }
+}

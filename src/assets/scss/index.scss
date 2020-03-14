@@ -1,2 +1,12 @@
-@import "./main";
+@import "_variables";
+@import "animations";
 
+@import "main";
+@import "components/buttons";
+
+@import "components/slider";
+@import "components/gallery";
+@import "components/counter";
+@import "components/image-slider";
+@import "components/discount";
+@import "components/flip-card";

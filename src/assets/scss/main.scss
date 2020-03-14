@@ -1,0 +1,65 @@
+
+#app {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 320px;
+  padding-right: 10px;
+  padding-left: 10px;
+  @include for-tablet {
+    max-width: 768px;
+  }
+  @include for-laptop {
+    max-width: 1440px;
+  }
+  @include for-desktop {
+    max-width: 1920px;
+  }
+}
+
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/MullerRegular.woff") format("woff"),
+    url("../fonts/MullerRegular.woff2") format("woff2"),
+    url("../fonts/MullerRegular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Baskerville";
+  src: url("../fonts/Baskerville_Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Stolzl";
+  src: url("../fonts/StolzlRegular.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Stolzl";
+  src: url("../fonts/StolzlBook.otf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Stolzl";
+  src: url("../fonts/StolzlLight.otf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Stolzl";
+  src: url("../fonts/StolzlThin.otf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}

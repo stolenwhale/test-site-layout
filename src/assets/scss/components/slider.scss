@@ -1,0 +1,194 @@
+.slider {
+  @include for-tablet {
+    overflow: inherit;
+  }
+  .slider__slide {
+    padding: 0 30px;
+    box-sizing: border-box;
+    opacity: 0.4;
+
+    &.slider__slide_active {
+      opacity: 1;
+    }
+
+    @include for-tablet {
+      width: 496px;
+      position: relative;
+      padding: 48px 56px;
+      opacity: 0.6;
+      transition: 0.4s ease;
+    }
+    @include for-laptop {
+      width: 944px;
+      padding: 88px 96px 56px;
+    }
+    @include for-desktop {
+      width: 1336px;
+      padding: 160px 152px 56px;
+    }
+
+    .slider__title {
+      position: relative;
+      z-index: 2;
+      margin: 50px 0 10px 0;
+      font-family: Baskerville;
+      font-style: italic;
+      font-size: 20px;
+      font-weight: 100;
+      color: #ffffff;
+      @include for-tablet {
+        margin: 0px 0 10px 0;
+        font-size: 21px;
+      }
+    }
+
+    .slider__desc {
+      position: relative;
+      z-index: 2;
+      display: inline-block;
+      margin: 0 0 80px 0;
+      font-family: Stolzl;
+      font-weight: 300;
+      font-size: 30px;
+      color: #ffffff;
+      @include for-tablet {
+        margin: 0 0 70px 0;
+      }
+      @include for-laptop {
+        max-width: 500px;
+        margin: 0 0 30px 0;
+        font-size: 60px;
+        line-height: 64px;
+      }
+      @include for-desktop {
+        margin: 0 0 210px 0;
+      }
+    }
+
+    .slider__read-more-btn {
+      position: relative;
+      z-index: 2;
+      padding: 10px 53px;
+      margin: 0 0 20px 0;
+      @include for-tablet {
+        padding: 10px 87px;
+        margin: 0 0 50px 0;
+      }
+      @include for-laptop {
+        padding: 15px 87px;
+      }
+    }
+
+    .slider__counter {
+      position: relative;
+      z-index: 2;
+      right: 20px;
+      display: flex;
+      justify-content: flex-end;
+      @include for-tablet {
+        right: -20px;
+        top: -5px;
+      }
+      @include for-laptop {
+        right: 40px;
+        top: -45px;
+      }
+    }
+
+    .slider__img {
+      max-width: 320px;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      @include for-tablet {
+        max-width: 496px;
+      }
+      @include for-laptop {
+        max-width: 944px;
+      }
+      @include for-desktop {
+        max-width: 1336px;
+      }
+    }
+  }
+
+  .slider__pagination {
+    position: relative;
+    z-index: 2;
+    width: 40px;
+    margin-top: -20px;
+    left: 30px;
+    @include for-tablet {
+      margin-top: -70px;
+      left: 0px;
+    }
+    @include for-laptop {
+      display: none;
+    }
+
+    .slider__bullet {
+      display: inline-block;
+      box-sizing: border-box;
+      width: 8px;
+      height: 8px;
+      margin: 5px;
+      background: #d8d8d8;
+      transform: rotateZ(45deg);
+      @include for-tablet {
+        width: 6px;
+        height: 6px;
+        margin: 1px 1px 1px 4px;
+      }
+    }
+
+    .slider__bullet_active {
+      background: #b08f5a;
+    }
+  }
+
+  .slider__button-prev,
+  .slider__button-next {
+    display: none;
+    @include for-laptop {
+      display: block;
+      position: absolute;
+      bottom: 85px;
+      z-index: 2;
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 29px;
+        height: 16px;
+        background: asset("/images/slider/button-triangle.svg") no-repeat;
+        left: 20px;
+        top: 15px;
+      }
+    }
+    @include for-desktop {
+      bottom: 115px;
+    }
+  }
+
+  .slider__button-prev {
+    left: 100px;
+    &:after {
+      transform: rotateY(180deg);
+      left: 0;
+    }
+    @include for-desktop {
+      left: 140px;
+    }
+  }
+
+  .slider__button-next {
+    left: 170px;
+    @include for-desktop {
+      left: 200px;
+    }
+  }
+}

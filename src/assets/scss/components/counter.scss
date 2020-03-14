@@ -1,0 +1,24 @@
+.counter {
+  color: #6d6d6d;
+  .counter__current {
+    font-family: Baskerville;
+    font-style: italic;
+    font-size: 46px;
+    @include for-laptop {
+      font-size: 100px;
+    }
+  }
+  .counter__total {
+    font-family: Stolzl;
+    font-weight: 100;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    right: -25px;
+    @include for-laptop {
+      font-size: 30px;
+      top: 20px;
+      right: -45px;
+    }
+  }
+}
